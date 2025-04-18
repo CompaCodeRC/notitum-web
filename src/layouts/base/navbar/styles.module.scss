@@ -1,0 +1,42 @@
+@import "@styles/variables";
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    background-color: map-get($colors, 'light', 'main');
+    border-bottom: 2px solid map-get($colors, 'grey', 'main');
+}
+
+.logo {
+    width: 100%;
+    height: 60px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.search {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid map-get($colors, 'grey', 'light');
+    }
+}

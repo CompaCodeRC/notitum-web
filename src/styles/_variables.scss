@@ -1,0 +1,95 @@
+$colors: (
+    'primary': (
+        'main': #f7f7f7,
+        'light': #2A85FF,
+        'dark': #006dfc,
+    ),
+    'secondary': (
+        'main': #101010,
+        'light': #000,
+        'dark': #000,
+    ),
+    'info': (
+        'main': #2A85FF,
+        'light': #B1E5FC,
+        'dark': #2A85FF,
+    ),
+    'success': (
+        'main': #83BF6E,
+        'light': #B5E4CA,
+        'dark': #83BF6E,
+    ),
+    'warning': (
+        'main': #ffb255,
+        'light': #FFD88D,
+        'dark': #ffb255,
+    ),
+    'danger': (
+        'main': #FF6A55,
+        'light': #FFBC99,
+        'dark': #FF6A55,
+    ),
+    'light': (
+        'main': #f7f7f7,
+        'light': #fff,
+        'dark': #fff,
+    ),
+    'dark': (
+        'main': #101010,
+        'light': #272B30,
+        'dark': #111315,
+    ),
+    'grey': (
+        'main': #888888,
+        'light': #81838d,
+        'dark': #33383F,
+    ),
+);
+
+@mixin responsive {
+    width: min(100% - 15px, 1400px);
+    margin-inline: auto;
+}
+
+$shadows : (
+    'text': 0px 3px 3px rgba(0,0,0,0.3),
+    'button': 2px 3px 0px rgb(0, 0, 0),
+    'active': 0 0 0.5rem 0 rgba(0, 0, 0, 0.6),
+    'focus': 0 0 0.5rem 0 rgba(0, 0, 0, 0.8),
+    'card': (
+        'sm': 0 1px 2px 0 rgb(0 0 0 / 0.05),
+        'md': 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        'lg': 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    )
+);
+
+$size: (
+    'xs': 0.75rem,
+    'sm': 0.875rem,
+    'md': 1rem,
+    'lg': 1.125rem,
+    'xl': 1.25rem,
+    'xxl': 1.5rem,
+    'xxxl': 2rem,
+    'xxxxl': 3rem,
+);
+
+$breakpoints: (
+    'phone': 580px,
+    'tablet': 968px,
+    'desktop': 1024px,
+    'wide': 1280px,
+    'full': 1400px,
+);
+
+$font_size: (
+    "h1": 40px, //2.5rem
+    "h2": 32px, //2rem
+    "h3": 28px, //1.75rem
+    "h4": 24px, //1.5rem
+    "h5": 20px, //1.25rem
+    "h6": 18px, //1.125rem
+    "p": 16px, //1rem
+    "small": 14px, //0.875rem
+    "mini": 12px, //0.75rem
+);

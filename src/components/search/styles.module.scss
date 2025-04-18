@@ -1,0 +1,27 @@
+@import "@styles/variables";
+
+.input {
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid map-get($colors, 'grey', 'light');
+
+    svg {
+        color: map-get($colors, 'grey', 'light');
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 5px 0;
+
+        &::placeholder {
+            color: map-get($colors, 'grey', 'light');
+        }
+    }
+}

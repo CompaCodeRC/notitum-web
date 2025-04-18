@@ -1,0 +1,96 @@
+@import "@styles/variables";
+
+.item {
+    width: 100%;
+    border: 3px solid;
+    border-radius: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+
+    &:hover {
+        animation: cards 0.5s ease-in-out;
+        z-index: 7;
+    }
+
+    .header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+
+        .name {
+            color: white;
+
+            >.title {
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            >.description {
+                color: map-get($colors, 'light', 'main');
+            }
+        }
+
+        .price {
+            background-color: #00000085;
+            border-radius: 50px;
+            padding: 8px 10px 8px 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .currency {
+                background-color: map-get($colors, 'light', 'main');
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                padding: 5px;
+                color: map-get($colors, 'warning', 'main');
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 900;
+                font-size: 16px;
+            }
+
+            .amount {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .image {
+            width: 300px;
+            height: 300px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+@keyframes cards {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

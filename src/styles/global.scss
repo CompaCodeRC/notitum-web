@@ -1,0 +1,56 @@
+@import '@styles/variables';
+/* @import '@styles/fonts.scss'; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *:before, *:after {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    background-color: map-get($colors, 'light', 'main');
+    color: map-get($colors, 'dark', 'main');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+hr {
+    margin: 24px 0;
+    border: none;
+    border-top: 1px solid map-get($colors, 'dark', 'light');
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.ReactModal__Overlay {
+    background-color: rgb(0 0 0 / 63%) !important;
+    z-index: 20;
+}
+.ReactModal__Content {
+    border: none !important;
+    background: transparent !important;
+    inset: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

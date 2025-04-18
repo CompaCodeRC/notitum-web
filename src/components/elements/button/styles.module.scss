@@ -1,0 +1,145 @@
+@import "@styles/variables";
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0px 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    color: map-get($colors, "light", "main");
+    position: relative;
+    transition: all 0.2s;
+    border: none;
+    width: inherit;
+    
+    &:hover {
+        color: map-get($colors, "light", "main");
+    }
+    
+    &.primary {
+        background-color: map-get($colors, "primary", "main");
+
+        &:hover {
+            background-color: darken(map-get($colors, "primary", "main"), 10);
+        }
+    }
+
+    &.success {
+        background-color: map-get($colors, "success", "main");
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid map-get($colors, "success", "main");
+            color: map-get($colors, "success", "main");
+        }
+    }
+
+    &.danger {
+        background-color: map-get($colors, "danger", "main");
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid map-get($colors, "danger", "main");
+            color: map-get($colors, "danger", "main");
+        }
+    }
+
+    &.warning {
+        background-color: map-get($colors, "warning", "main");
+        color: white;
+    }
+
+    &.info {
+        background-color: map-get($colors, "info", "main");
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid map-get($colors, "info", "main");
+            color: map-get($colors, "info", "main");
+        }
+    }
+
+
+    &.secondary {
+        background-color: map-get($colors, "secondary", "main");
+        color: white;
+    }
+
+    &.dark {
+        background-color: map-get($colors, "dark", "main");
+        color: white;
+
+        &_outline {
+            background-color: transparent;
+            border: 1px solid map-get($colors, "dark", "main");
+            color: map-get($colors, "dark", "main");
+        }
+    }
+
+    &.none {
+        background-color: transparent;
+        color: map-get($colors, "grey", "main");
+
+        &:hover {
+            background-color: map-get($colors, "grey", "dark");
+            color: white;
+        }
+    }
+
+    &.sm {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    &.md {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &.xl {
+        padding: 1.5rem 3rem;
+        font-size: 2.2rem;
+        font-weight: 800;
+
+        @media screen and (max-width: 767px) {
+            font-size: 2rem;
+        }
+    }
+
+    &.loading {
+        pointer-events: none;
+        
+        .text {
+            opacity: 0;
+        }
+
+        .spinner {
+            opacity: 1;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        background-color: map-get($colors, "grey", "light");
+        color: map-get($colors, "grey", "main");
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}

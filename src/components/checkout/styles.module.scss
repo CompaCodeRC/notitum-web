@@ -1,0 +1,142 @@
+@import "@styles/variables";
+
+.header {
+    display: flex;
+    font-size: map-get($font_size, "h6");
+    padding: 1rem 0 2rem 0;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+
+    &:hover {
+        svg {
+            animation: arrow_left 0.5s ease-in-out;
+        }
+    }
+}
+
+.body {
+    display: flex;
+    gap: 1rem;
+}
+
+.steps {
+    background-color: map-get($colors, "dark", "main");
+    border-radius: 10px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 700px;
+}
+
+.summary {
+    background-color: map-get($colors, "dark", "main");
+    border-radius: 10px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 450px;
+
+    .details {
+        text-align: center;
+        .title {
+            font-size: map-get($font_size, "h4");
+            font-weight: 600;
+        }
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            position: relative;
+
+            .remove {
+                position: absolute;
+                right: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: red
+            }
+        }
+
+        .total {
+            font-size: map-get($font_size, "h3");
+
+            >div {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .security {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >div {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .description {
+                font-size: map-get($font_size, "small");
+            }
+        }
+    }   
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+
+    .items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        >div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .description {
+                font-size: map-get($font_size, "h5");
+                font-weight: 600;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@keyframes arrow_left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
